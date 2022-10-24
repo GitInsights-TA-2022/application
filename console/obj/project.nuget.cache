@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t1dI1rQPasqUpgNuNhgCcm6ZaTratTMEHIxDe8hkwoK3ZHNJ6kpV4Mh1jz7gvyOx9TOUXA3ZFaRPKG6Q2gwtUw==",
+  "dgSpecHash": "F6KvMJXb49uIO9Fr/bvErJ2b08v3GJNP2zb6XSK58A4sAJxEDgFXOKYcR45XvUoVI2QjVEdD42W6Twkhh0FrIA==",
   "success": true,
-  "projectFilePath": "/home/megustav/workspace/BDSA2022_project/application/application.csproj",
+  "projectFilePath": "/home/megustav/workspace/application/console/console.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

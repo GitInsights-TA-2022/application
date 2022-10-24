@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/megustav/workspace/BDSA2022_project/application/application.csproj",
-      "projectName": "application",
-      "projectPath": "/home/megustav/workspace/BDSA2022_project/application/application.csproj",
+      "projectUniqueName": "/home/megustav/workspace/application/console/console.csproj",
+      "projectName": "console",
+      "projectPath": "/home/megustav/workspace/application/console/console.csproj",
       "packagesPath": "/home/megustav/.nuget/packages/",
-      "outputPath": "/home/megustav/workspace/BDSA2022_project/application/obj/",
+      "outputPath": "/home/megustav/workspace/application/console/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/megustav/.nuget/NuGet/NuGet.Config"
