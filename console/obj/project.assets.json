@@ -2,10 +2,10 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "LibGit2Sharp/0.26.2": {
+      "LibGit2Sharp/0.27.0-preview-0029": {
         "type": "package",
         "dependencies": {
-          "LibGit2Sharp.NativeBinaries": "[2.0.306]"
+          "LibGit2Sharp.NativeBinaries": "[2.0.298]"
         },
         "compile": {
           "lib/netstandard2.0/LibGit2Sharp.dll": {
@@ -18,7 +18,7 @@
           }
         }
       },
-      "LibGit2Sharp.NativeBinaries/2.0.306": {
+      "LibGit2Sharp.NativeBinaries/2.0.298": {
         "type": "package",
         "build": {
           "build/LibGit2Sharp.NativeBinaries.props": {}
@@ -27,59 +27,59 @@
           "buildMultiTargeting/LibGit2Sharp.NativeBinaries.props": {}
         },
         "runtimeTargets": {
-          "runtimes/alpine-x64/native/libgit2-106a5f2.so": {
+          "runtimes/alpine-x64/native/libgit2-ef5a385.so": {
             "assetType": "native",
             "rid": "alpine-x64"
           },
-          "runtimes/alpine.3.9-x64/native/libgit2-106a5f2.so": {
+          "runtimes/alpine.3.9-x64/native/libgit2-ef5a385.so": {
             "assetType": "native",
             "rid": "alpine.3.9-x64"
           },
-          "runtimes/debian-arm64/native/libgit2-106a5f2.so": {
+          "runtimes/debian-arm64/native/libgit2-ef5a385.so": {
             "assetType": "native",
             "rid": "debian-arm64"
           },
-          "runtimes/debian.9-x64/native/libgit2-106a5f2.so": {
+          "runtimes/debian.9-x64/native/libgit2-ef5a385.so": {
             "assetType": "native",
             "rid": "debian.9-x64"
           },
-          "runtimes/fedora-x64/native/libgit2-106a5f2.so": {
+          "runtimes/fedora-x64/native/libgit2-ef5a385.so": {
             "assetType": "native",
             "rid": "fedora-x64"
           },
-          "runtimes/linux-x64/native/libgit2-106a5f2.so": {
+          "runtimes/linux-x64/native/libgit2-ef5a385.so": {
             "assetType": "native",
             "rid": "linux-x64"
           },
-          "runtimes/osx/native/libgit2-106a5f2.dylib": {
+          "runtimes/osx/native/libgit2-ef5a385.dylib": {
             "assetType": "native",
             "rid": "osx"
           },
-          "runtimes/rhel-x64/native/libgit2-106a5f2.so": {
+          "runtimes/rhel-x64/native/libgit2-ef5a385.so": {
             "assetType": "native",
             "rid": "rhel-x64"
           },
-          "runtimes/ubuntu.16.04-arm64/native/libgit2-106a5f2.so": {
+          "runtimes/ubuntu.16.04-arm64/native/libgit2-ef5a385.so": {
             "assetType": "native",
             "rid": "ubuntu.16.04-arm64"
           },
-          "runtimes/ubuntu.18.04-x64/native/libgit2-106a5f2.so": {
+          "runtimes/ubuntu.18.04-x64/native/libgit2-ef5a385.so": {
             "assetType": "native",
             "rid": "ubuntu.18.04-x64"
           },
-          "runtimes/win-x64/native/git2-106a5f2.dll": {
+          "runtimes/win-x64/native/git2-ef5a385.dll": {
             "assetType": "native",
             "rid": "win-x64"
           },
-          "runtimes/win-x64/native/git2-106a5f2.pdb": {
+          "runtimes/win-x64/native/git2-ef5a385.pdb": {
             "assetType": "native",
             "rid": "win-x64"
           },
-          "runtimes/win-x86/native/git2-106a5f2.dll": {
+          "runtimes/win-x86/native/git2-ef5a385.dll": {
             "assetType": "native",
             "rid": "win-x86"
           },
-          "runtimes/win-x86/native/git2-106a5f2.pdb": {
+          "runtimes/win-x86/native/git2-ef5a385.pdb": {
             "assetType": "native",
             "rid": "win-x86"
           }
@@ -88,10 +88,10 @@
     }
   },
   "libraries": {
-    "LibGit2Sharp/0.26.2": {
-      "sha512": "qHLhuI8VEtMf7jiurT/Ypquh37S6ngllCx+aq9uqOY2evok7Fb2AzhJgvNctsXOzHaJwveBs+30sPQJFn/pISg==",
+    "LibGit2Sharp/0.27.0-preview-0029": {
+      "sha512": "VeAGqO90q7WSfsbTIH+XSQoEnK0iIkRCYHYot3MnczFOp8W4oXqtHnHQdDPwGiqPgwCDWSFIigCqKVp4Y1AYRA==",
       "type": "package",
-      "path": "libgit2sharp/0.26.2",
+      "path": "libgit2sharp/0.27.0-preview-0029",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -104,14 +104,14 @@
         "lib/netstandard2.0/LibGit2Sharp.dll",
         "lib/netstandard2.0/LibGit2Sharp.pdb",
         "lib/netstandard2.0/LibGit2Sharp.xml",
-        "libgit2sharp.0.26.2.nupkg.sha512",
+        "libgit2sharp.0.27.0-preview-0029.nupkg.sha512",
         "libgit2sharp.nuspec"
       ]
     },
-    "LibGit2Sharp.NativeBinaries/2.0.306": {
-      "sha512": "LY9nyPE2X/eLl69ttuDPFFlKR8b5KXlqYej1YR1YmqmhF8Izo+vPX90q5ouOO5YGCf5d4lDUOC0x2yMWw00P7Q==",
+    "LibGit2Sharp.NativeBinaries/2.0.298": {
+      "sha512": "xcjafpXRiv2mvSUTOVpv6SaFZi5udUtZ+DXxmBTL4aQpyrb2mwMqkVw3LYL06HLCaBV5GmC0/8R8CGvMmRx0Uw==",
       "type": "package",
-      "path": "libgit2sharp.nativebinaries/2.0.306",
+      "path": "libgit2sharp.nativebinaries/2.0.298",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -121,28 +121,28 @@
         "libgit2/LibGit2Sharp.dll.config",
         "libgit2/libgit2.license.txt",
         "libgit2/libgit2_hash.txt",
-        "libgit2sharp.nativebinaries.2.0.306.nupkg.sha512",
+        "libgit2sharp.nativebinaries.2.0.298.nupkg.sha512",
         "libgit2sharp.nativebinaries.nuspec",
-        "runtimes/alpine-x64/native/libgit2-106a5f2.so",
-        "runtimes/alpine.3.9-x64/native/libgit2-106a5f2.so",
-        "runtimes/debian-arm64/native/libgit2-106a5f2.so",
-        "runtimes/debian.9-x64/native/libgit2-106a5f2.so",
-        "runtimes/fedora-x64/native/libgit2-106a5f2.so",
-        "runtimes/linux-x64/native/libgit2-106a5f2.so",
-        "runtimes/osx/native/libgit2-106a5f2.dylib",
-        "runtimes/rhel-x64/native/libgit2-106a5f2.so",
-        "runtimes/ubuntu.16.04-arm64/native/libgit2-106a5f2.so",
-        "runtimes/ubuntu.18.04-x64/native/libgit2-106a5f2.so",
-        "runtimes/win-x64/native/git2-106a5f2.dll",
-        "runtimes/win-x64/native/git2-106a5f2.pdb",
-        "runtimes/win-x86/native/git2-106a5f2.dll",
-        "runtimes/win-x86/native/git2-106a5f2.pdb"
+        "runtimes/alpine-x64/native/libgit2-ef5a385.so",
+        "runtimes/alpine.3.9-x64/native/libgit2-ef5a385.so",
+        "runtimes/debian-arm64/native/libgit2-ef5a385.so",
+        "runtimes/debian.9-x64/native/libgit2-ef5a385.so",
+        "runtimes/fedora-x64/native/libgit2-ef5a385.so",
+        "runtimes/linux-x64/native/libgit2-ef5a385.so",
+        "runtimes/osx/native/libgit2-ef5a385.dylib",
+        "runtimes/rhel-x64/native/libgit2-ef5a385.so",
+        "runtimes/ubuntu.16.04-arm64/native/libgit2-ef5a385.so",
+        "runtimes/ubuntu.18.04-x64/native/libgit2-ef5a385.so",
+        "runtimes/win-x64/native/git2-ef5a385.dll",
+        "runtimes/win-x64/native/git2-ef5a385.pdb",
+        "runtimes/win-x86/native/git2-ef5a385.dll",
+        "runtimes/win-x86/native/git2-ef5a385.pdb"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "LibGit2Sharp >= 0.26.2"
+      "LibGit2Sharp >= 0.27.0-preview-0029"
     ]
   },
   "packageFolders": {
@@ -184,7 +184,7 @@
         "dependencies": {
           "LibGit2Sharp": {
             "target": "Package",
-            "version": "[0.26.2, )"
+            "version": "[0.27.0-preview-0029, )"
           }
         },
         "imports": [
