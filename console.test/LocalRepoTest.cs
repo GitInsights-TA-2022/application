@@ -3,7 +3,7 @@ namespace console.test;
 public class LocalRepoTest : TestBase
 {
     [Fact]
-    public void Given_blob_blib_blab()
+    public void Given_empty_repo_works_with_commits()
     {
         // now add some test data ...
         // each commit needs a signature where we can set author and datetime
@@ -30,12 +30,12 @@ public class LocalRepoTest : TestBase
             new CommitOptions() { AllowEmptyCommit = true }
         );
 
-        Assert.Equal(TestRepository.Commits.Count(), 3);
+        Assert.Equal(3, TestRepository.Commits.Count());
     }
 
     [Fact]
-    public void TestName()
+    public void Given_empty_repo_is_diff_from_prev_test()
     {
-        Assert.Equal(TestRepository.Commits.Count(), 0);
+        Assert.Equal(0, TestRepository.Commits.Count());
     }
 }

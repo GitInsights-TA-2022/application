@@ -19,7 +19,7 @@ public class TestRepoUtils
     {
         // clean up after the test by disposing the Repository object and
         // deleting the created folder with the git repo
-        repo.Dispose();
         Directory.Delete(repo.Info.Path, recursive: true);
+        repo.Dispose();
     }
 }
