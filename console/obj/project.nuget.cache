@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "F6KvMJXb49uIO9Fr/bvErJ2b08v3GJNP2zb6XSK58A4sAJxEDgFXOKYcR45XvUoVI2QjVEdD42W6Twkhh0FrIA==",
+  "dgSpecHash": "WnBPjWIXnSY7ciyhJ4DZbboMWF9T5lekQ8gPHTLDzpw2QiBlZvZqIVYnGavaQHyraIVZBwxmhA3mXfRermj3cw==",
   "success": true,
-  "projectFilePath": "/home/megustav/workspace/application/console/console.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/megustav/workspace/BDSA2022_project/application/console/console.csproj",
+  "expectedPackageFiles": [
+    "/home/megustav/.nuget/packages/libgit2sharp/0.26.2/libgit2sharp.0.26.2.nupkg.sha512",
+    "/home/megustav/.nuget/packages/libgit2sharp.nativebinaries/2.0.306/libgit2sharp.nativebinaries.2.0.306.nupkg.sha512"
+  ],
   "logs": []
 }
