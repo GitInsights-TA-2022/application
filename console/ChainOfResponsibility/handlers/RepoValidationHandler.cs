@@ -2,13 +2,13 @@ public class RepoValidationHandler : AbstractHandler
 {
     public override int Handle(BaseModel model)
     {
-        if (Directory.Exists(model.RepositoryPath))
+        if (Repository.IsValid(model.RepositoryPath))
         {
             return base.Handle(model);
         }
         else
         {
-            System.Console.WriteLine("The provided path is not a valid directory");
+            System.Console.WriteLine("The provided path does not contain a valid git repository");
             return -1;
         }
     }
