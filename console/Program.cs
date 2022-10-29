@@ -15,11 +15,19 @@ public class Program
 
     static int HandleFreqOptions(FrequencyOptions opts)
     {
-        return 1;
+        var dirHandler = new PathValidationHandler();
+        var repoHandler = new RepoValidationHandler();
+        var commitFreqHandler = new CommitFrequencyHandler();
+        dirHandler.SetNext(repoHandler).SetNext(commitFreqHandler);
+        return dirHandler.Handle(opts);
     }
 
     static int HandleAuthOptions(AuthorOptions opts)
     {
-        return 1;
+        var dirHandler = new PathValidationHandler();
+        var repoHandler = new RepoValidationHandler();
+        var commitFreqHandler = new CommitAuthorHandler();
+        dirHandler.SetNext(repoHandler).SetNext(commitFreqHandler);
+        return dirHandler.Handle(opts);
     }
 }

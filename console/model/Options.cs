@@ -3,7 +3,7 @@ namespace console.model;
 // #nullable disable warnings
 public class BaseModel
 {
-    [Value(1, Required = true, HelpText = "The path to the local git repository")]
+    [Value(1, MetaName = "path/to/git/repo", Required = true, HelpText = "The path to the local git repository")]
     public string RepositoryPath { get; init; } = default!;
 }
 
