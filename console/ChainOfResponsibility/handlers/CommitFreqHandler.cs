@@ -1,3 +1,4 @@
+namespace console.COR.handlers;
 public class CommitFrequencyHandler : AbstractHandler
 {
     public override int Handle(BaseModel model)
@@ -11,7 +12,7 @@ public class CommitFrequencyHandler : AbstractHandler
                 Day = c.First().Author.When.Date
             })
             .ToList()
-            .ForEach(item => WriteLine($"  {item.Day.ToShortDateString()} : {item.Count}"));
+            .ForEach(item => WriteLine($"\t{item.Day.ToShortDateString()} : {item.Count}"));
 
         return 1;
     }

@@ -1,5 +1,4 @@
 ﻿namespace console;
-
 public class Program
 {
     public static void Main(string[] args)
@@ -8,7 +7,7 @@ public class Program
             .MapResult
             (
                 (FrequencyOptions opts) => HandleFreqOptions(opts),
-                (AuthorOptions opts) => HandleAuthOptions(opts),
+                (AuthorOptions opts) => HandleAuthorOptions(opts),
                 e => -1
             );
     }
@@ -22,7 +21,7 @@ public class Program
         return dirHandler.Handle(opts);
     }
 
-    static int HandleAuthOptions(AuthorOptions opts)
+    static int HandleAuthorOptions(AuthorOptions opts)
     {
         var dirHandler = new PathValidationHandler();
         var repoHandler = new RepoValidationHandler();
