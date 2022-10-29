@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "F6KvMJXb49uIO9Fr/bvErJ2b08v3GJNP2zb6XSK58A4sAJxEDgFXOKYcR45XvUoVI2QjVEdD42W6Twkhh0FrIA==",
+  "dgSpecHash": "pxa2qjLioluAPMwNuG+CVLyGgIEbT/zDKbxPb/pT+ULQGgNXP66fK6I42DgVRNgE88oUlltHDs7XF9L1Nle9XA==",
   "success": true,
-  "projectFilePath": "/home/megustav/workspace/application/console/console.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/megustav/workspace/BDSA2022_project/application/console/console.csproj",
+  "expectedPackageFiles": [
+    "/home/megustav/.nuget/packages/commandlineparser/2.9.1/commandlineparser.2.9.1.nupkg.sha512",
+    "/home/megustav/.nuget/packages/libgit2sharp/0.27.0-preview-0029/libgit2sharp.0.27.0-preview-0029.nupkg.sha512",
+    "/home/megustav/.nuget/packages/libgit2sharp.nativebinaries/2.0.298/libgit2sharp.nativebinaries.2.0.298.nupkg.sha512"
+  ],
   "logs": []
 }
