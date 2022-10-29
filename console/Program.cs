@@ -6,13 +6,13 @@ public class Program
         CommandLine.Parser.Default.ParseArguments<FrequencyOptions, AuthorOptions>(args)
             .MapResult
             (
-                (FrequencyOptions opts) => HandleFreqOptions(opts),
-                (AuthorOptions opts) => HandleAuthorOptions(opts),
+                (FrequencyOptions opts) => RunWithFreqOptions(opts),
+                (AuthorOptions opts) => RunWithAuthorOptions(opts),
                 e => -1
             );
     }
 
-    static int HandleFreqOptions(FrequencyOptions opts)
+    static int RunWithFreqOptions(FrequencyOptions opts)
     {
         var dirHandler = new PathValidationHandler();
         var repoHandler = new RepoValidationHandler();
@@ -21,7 +21,7 @@ public class Program
         return dirHandler.Handle(opts);
     }
 
-    static int HandleAuthorOptions(AuthorOptions opts)
+    static int RunWithAuthorOptions(AuthorOptions opts)
     {
         var dirHandler = new PathValidationHandler();
         var repoHandler = new RepoValidationHandler();
