@@ -5,14 +5,10 @@
       "CommandLineParser/2.9.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/CommandLine.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/CommandLine.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/CommandLine.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/CommandLine.dll": {}
         }
       },
       "LibGit2Sharp/0.27.0-preview-0029": {
@@ -21,14 +17,10 @@
           "LibGit2Sharp.NativeBinaries": "[2.0.298]"
         },
         "compile": {
-          "lib/netstandard2.0/LibGit2Sharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/LibGit2Sharp.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/LibGit2Sharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/LibGit2Sharp.dll": {}
         }
       },
       "LibGit2Sharp.NativeBinaries/2.0.298": {
@@ -182,19 +174,19 @@
     ]
   },
   "packageFolders": {
-    "/home/megustav/.nuget/packages/": {}
+    "/Users/mlip/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/megustav/workspace/BDSA2022_project/application/console/console.csproj",
+      "projectUniqueName": "/Users/mlip/itu/bdsa22/gitinsight/console/console.csproj",
       "projectName": "console",
-      "projectPath": "/home/megustav/workspace/BDSA2022_project/application/console/console.csproj",
-      "packagesPath": "/home/megustav/.nuget/packages/",
-      "outputPath": "/home/megustav/workspace/BDSA2022_project/application/console/obj/",
+      "projectPath": "/Users/mlip/itu/bdsa22/gitinsight/console/console.csproj",
+      "packagesPath": "/Users/mlip/.nuget/packages/",
+      "outputPath": "/Users/mlip/itu/bdsa22/gitinsight/console/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/megustav/.nuget/NuGet/NuGet.Config"
+        "/Users/mlip/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -233,8 +225,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -243,7 +234,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/6.0.110/libexec/sdk/6.0.110/RuntimeIdentifierGraph.json"
       }
     }
   }

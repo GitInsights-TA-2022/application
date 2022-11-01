@@ -1,4 +1,6 @@
-﻿namespace console;
+﻿using console.COR;
+
+namespace console;
 public class Program
 {
     public static void Main(string[] args)
@@ -12,21 +14,15 @@ public class Program
             );
     }
 
-    static int RunWithFreqOptions(FrequencyOptions opts)
-    {
-        var dirHandler = new PathValidationHandler();
-        var repoHandler = new RepoValidationHandler();
-        var commitFreqHandler = new CommitFrequencyHandler();
-        dirHandler.SetNext(repoHandler).SetNext(commitFreqHandler);
-        return dirHandler.Handle(opts);
-    }
+    static int RunWithFreqOptions(FrequencyOptions opts) =>
+        SetupBaselineHandlersWith(new CommitFrequencyHandler(), opts);
 
-    static int RunWithAuthorOptions(AuthorOptions opts)
-    {
-        var dirHandler = new PathValidationHandler();
-        var repoHandler = new RepoValidationHandler();
-        var commitFreqHandler = new CommitAuthorHandler();
-        dirHandler.SetNext(repoHandler).SetNext(commitFreqHandler);
-        return dirHandler.Handle(opts);
-    }
+    static int RunWithAuthorOptions(AuthorOptions opts) =>
+        SetupBaselineHandlersWith(new CommitAuthorHandler(), opts);
+
+    static int SetupBaselineHandlersWith(IHandler mode, BaseModel opts) =>
+        new PathValidationHandler()
+            .SetNext(new RepoValidationHandler())
+            .SetNext(mode)
+            .Handle(opts);
 }
