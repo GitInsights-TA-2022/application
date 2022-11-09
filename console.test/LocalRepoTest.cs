@@ -1,5 +1,4 @@
 namespace console.test;
-
 public class LocalRepoTest : TestBase
 {
     [Fact]

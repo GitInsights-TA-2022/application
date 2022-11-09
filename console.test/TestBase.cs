@@ -1,5 +1,4 @@
 namespace console.test;
-
 // This abstract base class provides an empty test repository for each unit test in inherited test classes 
 // with this setup, each unit test will have its own empty local repo to work with in isolation
 public abstract class TestBase : IDisposable

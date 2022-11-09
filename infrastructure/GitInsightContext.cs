@@ -1,21 +1,21 @@
 namespace infrastructure;
-public class AnalysisContext : DbContext
+public class GitInsightContext : DbContext
 {
-    public DbSet<Commit> Commits => Set<Commit>();
+    public DbSet<Analysis> Analyses => Set<Analysis>();
 
-    public AnalysisContext() { }
+    public GitInsightContext() { }
 
-    public AnalysisContext(DbContextOptions<AnalysisContext> options)
+    public GitInsightContext(DbContextOptions<GitInsightContext> options)
         : base(options) { }
 
     protected override void OnModelCreating(ModelBuilder model)
     {
-        model.Entity<Commit>(e =>
+        model.Entity<Analysis>(e =>
         {
-            e.Property(e => e.Author).IsRequired();
-            e.Property(e => e.Timestamp).IsRequired();
-            e.Property(e => e.Timestamp).HasConversion<string>();
-            e.HasIndex(e => e.Timestamp).IsUnique();
+            e.HasKey(e => e.RemoteUrl);
+            e.HasIndex(e => e.RemoteUrl);
+            e.HasMany(e => e.Authors).WithOne(a => a.Analysis);
+            e.Property(e => e.LastCommit).HasConversion<string>();
         });
     }
 
@@ -31,7 +31,9 @@ public class AnalysisContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            var configuration = new ConfigurationBuilder().AddUserSecrets<AnalysisContext>().Build();
+            var configuration = new ConfigurationBuilder()
+                .AddUserSecrets<GitInsightContext>()
+                .Build();
             var connectionString = configuration.GetConnectionString("gitinsight");
             optionsBuilder.UseNpgsql(connectionString);
         }

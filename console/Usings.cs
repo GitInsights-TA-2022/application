@@ -4,3 +4,4 @@ global using LibGit2Sharp;
 global using System.Linq;
 global using static System.Console;
 global using console.COR.handlers;
+global using console.COR;

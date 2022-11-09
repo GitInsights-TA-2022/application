@@ -1,5 +1,4 @@
 namespace console.test;
-
 // kudos to Mikkel [lipp@itu.dk] for a decent and simple way to setup a local repo for unit testing 
 public class TestRepoUtils
 {

@@ -1,0 +1,47 @@
+namespace infrastructure;
+public class AnalysisRepository : IAnalysisRepository
+{
+    private readonly GitInsightContext _context = null!;
+
+    public AnalysisRepository(GitInsightContext context)
+    {
+        _context = context;
+    }
+
+    public async Task<Status> Create(AnalysisCreateDTO analysis)
+    {
+        var entity = await _context.Analyses.FindAsync(analysis.RemoteUrl);
+        if (entity is not null) return Status.Conflict;
+        entity = new Analysis
+        {
+            RemoteUrl = analysis.RemoteUrl,
+            LastCommit = analysis.LastCommit,
+        };
+        await _context.Analyses.AddAsync(entity);
+        entity.Authors = analysis.Authors.Select(a => new Author
+        {
+            Name = a.Name,
+            Frequency = (Dictionary<Date, int>)a.Frequency.Select(f =>
+            (
+                new Date { Year = f.Key.Year, Month = f.Key.Month, Day = f.Key.Day },
+                f.Value
+            )),
+        });
+        await _context.SaveChangesAsync();
+        return Status.Success;
+    }
+
+    public async Task<AnalysisDTO?> Read(string remoteUrl)
+    {
+        var entity = await _context.Analyses.FindAsync(remoteUrl);
+        if (entity is null) return null;
+        return new AnalysisDTO(entity);
+    }
+
+    public async Task<Status> Update(AnalysisDTO analysis)
+    {
+        var entity = await _context.Analyses.FindAsync(analysis.RemoteUrl);
+        if (entity is null) return Status.NotFound;
+        throw new NotImplementedException();
+    }
+}
