@@ -5,7 +5,7 @@ public record AuthorDTO
     public string Name { get; } = null!;
     public Dictionary<DateTime, int> Frequency { get; } = new Dictionary<DateTime, int>();
     public int TotalCommits { get => this.Frequency.Select(f => f.Value).Sum(); }
-    public DateTime LastCommit { get => this.Frequency.Keys.OrderByDescending(date => date).First();}
+    public DateTime LastCommit { get => this.Frequency.Keys.OrderByDescending(date => date).FirstOrDefault(); }
     public AuthorDTO(Author entity)
     {
         Id = entity.Id;
