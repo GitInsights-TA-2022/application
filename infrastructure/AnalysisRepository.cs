@@ -18,15 +18,13 @@ public class AnalysisRepository : IAnalysisRepository
             LastCommit = analysis.LastCommit,
         };
         await _context.Analyses.AddAsync(entity);
-        entity.Authors = analysis.Authors.Select(a => new Author
-        {
-            Name = a.Name,
-            Frequency = (Dictionary<Date, int>)a.Frequency.Select(f =>
-            (
-                new Date { Year = f.Key.Year, Month = f.Key.Month, Day = f.Key.Day },
-                f.Value
-            )),
-        });
+        entity.Authors = analysis.Authors
+            .Select(a => new Author
+            {
+                Name = a.Name,
+                Frequency = a.Frequency,
+                Parent = entity,
+            });
         await _context.SaveChangesAsync();
         return Status.Success;
     }
@@ -38,10 +36,34 @@ public class AnalysisRepository : IAnalysisRepository
         return new AnalysisDTO(entity);
     }
 
-    public async Task<Status> Update(AnalysisDTO analysis)
+    public async Task<(Status, AnalysisDTO?)> Update(AnalysisDTO analysis)
     {
         var entity = await _context.Analyses.FindAsync(analysis.RemoteUrl);
-        if (entity is null) return Status.NotFound;
-        throw new NotImplementedException();
+        if (entity is null) return (Status.NotFound, null);
+        if (analysis.LastCommit is null)
+            entity.Authors = analysis.Authors
+                .Select(a => new Author
+                {
+                    Name = a.Name,
+                    Frequency = a.Frequency,
+                    Parent = entity,
+                });
+        else
+            entity.Authors = analysis.Authors
+                .Select(a => new Author
+                {
+                    Name = a.Name,
+                    Frequency = a.Frequency,
+                    Parent = entity,
+                })
+                .Where(a => a.LastCommit > entity.LastCommit);
+        entity.LastCommit = analysis.Authors
+            .OrderByDescending(a => a.LastCommit)
+            .First()
+            .LastCommit;
+        await _context.Analyses.AddAsync(entity);
+        await _context.SaveChangesAsync();
+        return (Status.Success, new AnalysisDTO(entity));
     }
+
 }

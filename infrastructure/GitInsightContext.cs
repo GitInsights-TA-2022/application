@@ -14,7 +14,7 @@ public class GitInsightContext : DbContext
         {
             e.HasKey(e => e.RemoteUrl);
             e.HasIndex(e => e.RemoteUrl);
-            e.HasMany(e => e.Authors).WithOne(a => a.Analysis);
+            e.HasMany(e => e.Authors).WithOne(a => a.Parent);
             e.Property(e => e.LastCommit).HasConversion<string>();
         });
     }
